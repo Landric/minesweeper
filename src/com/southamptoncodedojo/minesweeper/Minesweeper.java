@@ -1,7 +1,6 @@
 package com.southamptoncodedojo.minesweeper;
 
-import com.southamptoncodedojo.minesweeper.players.OrderedPlayer;
-import com.southamptoncodedojo.minesweeper.players.RandomPlayer;
+import com.southamptoncodedojo.minesweeper.players.*;
 import com.southamptoncodedojo.minesweeper.ui.CommandLineUI;
 
 /**
@@ -13,8 +12,8 @@ public class Minesweeper {
     public static void main(String[] args) {
 
         // Configure the game
-        int MAP_SIZE = 9;
-        int NUMBER_OF_MINES = 10;
+        int MAP_SIZE = 16;
+        int NUMBER_OF_MINES = 40;
 
         // This is used when displaying the game so that exceptions don't crash out
         // Don't use this when developing for better debugging
@@ -26,7 +25,7 @@ public class Minesweeper {
 
 
 
-        Player[] players = new Player[]{new RandomPlayer()};
+        Player[] players = new Player[]{new CornerPlayer(), new UltraSuperPlayer()};
 
         Game game = new Game(MAP_SIZE, NUMBER_OF_MINES, players);
         // if, while testing, you want to configure the map manually, use:

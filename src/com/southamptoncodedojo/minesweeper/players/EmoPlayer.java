@@ -1,4 +1,4 @@
-opackage com.southamptoncodedojo.minesweeper.players;
+package com.southamptoncodedojo.minesweeper.players;
 
 import com.southamptoncodedojo.minesweeper.Coordinate;
 import com.southamptoncodedojo.minesweeper.MapState;
